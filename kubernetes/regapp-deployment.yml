@@ -1,12 +1,12 @@
 apiVersion: apps/v1 
 kind: Deployment
 metadata:
-  name: valaxy-regapp
+  name: yixin-regapp
   labels: 
      app: regapp
 
 spec:
-  replicas: 2 
+  replicas: 3 
   selector:
     matchLabels:
       app: regapp
@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: regapp
-        image: valaxy/regapp
+        image: ethanyixinsun/regapp
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
